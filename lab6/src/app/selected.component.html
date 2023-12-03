@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Selected Users List
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="column-header">Name</ion-col>
+        <ion-col class="column-header" style="margin-right: 100px;">Email</ion-col>
+        <ion-col class="column-header">Login</ion-col>
+        <ion-col class="column-header">Password</ion-col>
+        <ion-col class="column-header">Phone</ion-col>
+      </ion-row>
+  
+      <ion-row *ngFor="let user of selected">
+        <ion-col class="column-content">{{ user.name.first }}</ion-col>
+        <ion-col class="column-content">{{ user.email }}</ion-col>
+        <ion-col class="column-content">{{ user.login.username }}</ion-col>
+        <ion-col class="column-content">{{ user.login.password }}</ion-col>
+        <ion-col class="column-content" style="margin-right: 20px;">{{ user.phone }}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  

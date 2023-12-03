@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            User Details
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="addToSelected()">
+                <ion-icon name="star"></ion-icon>
+            </ion-button>
+            <ion-button (click)="close()">
+                <ion-icon name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-grid>
+            <ion-row>
+                <ion-col>Name: </ion-col>
+                <ion-col>{{user.name.first}}</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>Email: </ion-col>
+                <ion-col>{{user.email}}</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>Login: </ion-col>
+                <ion-col>{{user.login.username}}</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>Password: </ion-col>
+                <ion-col>{{user.login.password}}</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>Phone: </ion-col>
+                <ion-col>{{user.phone}}</ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+</ion-content>

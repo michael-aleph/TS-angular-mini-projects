@@ -1,0 +1,33 @@
+<ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>
+              Users List
+            </ion-title>
+          </ion-toolbar>
+        </ion-header>
+  
+        <ion-content scroll-y style="height: 80vh;">
+          <ion-row class="header-row">
+            <ion-col>Name</ion-col>
+            <ion-col>Email</ion-col>
+            <ion-col>Login</ion-col>
+          </ion-row>
+  
+          <ion-grid *ngFor="let user of users">
+            <ion-row (click)="openDetails(user)">
+              <ion-col>{{ user.name.first }}</ion-col>
+              <ion-col>{{ user.email }}</ion-col>
+              <ion-col>{{ user.login.username }}</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-content>
+      </ion-col>
+      <ion-col>
+        <selected-component></selected-component>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  

@@ -1,0 +1,10 @@
+<h3>Selected users</h3>
+<ul>
+    <li *ngFor="let user of selected">
+        <p>Name: {{ user.name.first }}</p>
+        <p>Email: {{ user.email }}</p>
+        <p>Login: {{ user.login.username }}</p>
+        <p>Password: {{ user.login.password }}</p>
+        <p>Phone: {{ user.phone }}</p>
+    </li>
+</ul>
